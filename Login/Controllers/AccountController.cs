@@ -32,6 +32,8 @@ namespace Login.Controllers
                 return RedirectToAction("Login");
 
             }
+            ViewBag.role = new SelectList(db.Roles, "RoleId", "RoleName");
+
             return View();
         }
         [HttpGet]
